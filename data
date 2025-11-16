@@ -1,0 +1,6 @@
+Dataset: Yahoo Finance (Stock) + Macrotrends (Revenue)
+
+Used python libray 'yfinance'(powerd-by: yahoo-finance), which inludes tesla's data history.
+
+And for revenue data of tesla stock I have scrapped data from,
+Macrotrends: 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0220EN-SkillsNetwork/labs/project/revenue.htm'
