@@ -11,7 +11,7 @@ Pandas
 
 NumPy
 
-Matplotlib / Seaborn
+Matplotlib
 
 Jupyter Notebook
 
