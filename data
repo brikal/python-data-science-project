@@ -1,6 +1,9 @@
+## How data was processed
+
 Dataset: Yahoo Finance (Stock) + Macrotrends (Revenue)
 
-Used python libray 'yfinance'(powerd-by: yahoo-finance), which inludes tesla's data history.
+1. Stock data: downloaded via `yfinance`. Date parsed and set as index; numeric columns ensured. Missing values checked and dropped if insignificant. Stock close price resampled to quarter-end for comparison with revenue.
 
-And for revenue data of tesla stock I have scrapped data from,
-Macrotrends: 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0220EN-SkillsNetwork/labs/project/revenue.htm'
+2. Revenue data: scraped from Macrotrends using `pandas.read_html` (URL in Sources). Revenue strings cleaned by removing currency symbols and commas, converted to float.
+
+3. Merge logic: stock close price at quarter-end was matched with revenue for that quarter. Merging was done by aligning dates on quarter end (inner join). Details are in the notebook cells titled "Merge stock and revenue".
